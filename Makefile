@@ -351,6 +351,9 @@ cross-gdb: $(call MOD_CONFIG,gdb)
 	$(MAKE) -j$(PROCS) CFLAGS="-Wno-error=return-type" && \
 	$(MAKE) installdirs install-host install-target
 
+.PHONY : docker-build-image
+docker-build-image:
+	docker build -t arm-cs-tools .
 
 .PHONY : clean
 clean:
