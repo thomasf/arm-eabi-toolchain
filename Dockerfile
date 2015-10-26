@@ -9,6 +9,7 @@ RUN apt-get update && \
             libelf-dev \
             autoconf \
             git \
+            python \
             build-essential \
             libncurses5-dev && \
     apt-get clean && \
